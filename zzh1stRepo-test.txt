@@ -1,0 +1,238 @@
+
+DELL@DESKTOP-N4IC652 MINGW64 ~
+$ ssh -keygen -t rsa -C "1195874157@qq.com"
+Bad escape character 'ygen'.
+
+DELL@DESKTOP-N4IC652 MINGW64 ~
+$ ssh-keygen -t rsa -C "429240967@qq.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/DELL/.ssh/id_rsa):
+Created directory '/c/Users/DELL/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+
+
+DELL@DESKTOP-N4IC652 MINGW64 ~
+$ "429240967@qq.com"
+bash: 429240967@qq.com: command not found
+
+DELL@DESKTOP-N4IC652 MINGW64 ~
+$ ssh-keygen -t rsa -C "1195874157@qq.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/DELL/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/DELL/.ssh/id_rsa.
+Your public key has been saved in /c/Users/DELL/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:o1Vl5UIkjpk7FU11x1Nh03rg75Z8SRVVyfK+DypNsNo 1195874157@qq.com
+The key's randomart image is:
++---[RSA 3072]----+
+|          o+*o+=&|
+|         = *.oo*=|
+|        + + ..+oo|
+|         +.  .o.o|
+|        S  o  .o.|
+|       o o. .  o.|
+|      .  o o  +.+|
+|        . E .. *+|
+|           ..  .+|
++----[SHA256]-----+
+
+DELL@DESKTOP-N4IC652 MINGW64 ~
+$ ssh -T git@github.com
+The authenticity of host 'github.com (13.250.177.223)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com,13.250.177.223' (RSA) to the list of known hosts.
+Hi zuozihaozzz! You've successfully authenticated, but GitHub does not provide shell access.
+
+DELL@DESKTOP-N4IC652 MINGW64 ~
+$ mkdir zzh1stRepo
+
+DELL@DESKTOP-N4IC652 MINGW64 ~
+$ cd zzh1syRepo/
+bash: cd: zzh1syRepo/: No such file or directory
+
+DELL@DESKTOP-N4IC652 MINGW64 ~
+$ cd zzh1stRepo/
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo
+$ echo "Git 测试" >> README.md
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo
+$ ls
+README.md
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo
+$ git init
+Initialized empty Git repository in C:/Users/DELL/zzh1stRepo/.git/
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo (master)
+$ git add README.md
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo (master)
+$ git commit -m "添加 README.md文件"
+[master (root-commit) 237f81f] 添加 README.md文件
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo (master)
+$ git remote add origin git@github.com:zuozihaozzz/zzh1stRepo.git
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo (master)
+$ git push -u origin master
+Warning: Permanently added the RSA host key for IP address '52.74.223.119' to the list of known hosts.
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 240 bytes | 240.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/zuozihaozzz/zzh1stRepo/pull/new/master
+remote:
+To github.com:zuozihaozzz/zzh1stRepo.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo (master)
+$ echo "Git 测试" >> README1.md
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo (master)
+$ ls
+README.md  README1.md
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/DELL/zzh1stRepo/.git/
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo (master)
+$ git add README1.md
+warning: LF will be replaced by CRLF in README1.md.
+The file will have its original line endings in your working directory
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo (master)
+$ git commit -m "添加 README1.md文件"
+[master 1fb7d9f] 添加 README1.md文件
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README1.md
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo (master)
+$ git remote add origin git@github.com:zuozihaozzz/zzh1stRepo.git
+fatal: remote origin already exists.
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 260 bytes | 260.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0)
+To github.com:zuozihaozzz/zzh1stRepo.git
+   237f81f..1fb7d9f  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo (master)
+$ git remote
+origin
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo (master)
+$ git remote -v
+origin  git@github.com:zuozihaozzz/zzh1stRepo.git (fetch)
+origin  git@github.com:zuozihaozzz/zzh1stRepo.git (push)
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo (master)
+$ git fetch
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From github.com:zuozihaozzz/zzh1stRepo
+ * [new branch]      main       -> origin/main
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo (master)
+$ git merge
+Already up to date.
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo (master)
+$ git fetch origin
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From github.com:zuozihaozzz/zzh1stRepo
+   1fb7d9f..77233ed  master     -> origin/master
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo (master)
+$ git merge origin/master
+Updating 1fb7d9f..77233ed
+Fast-forward
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo (master)
+$ cat README.md
+Git 测试
+第一次修改
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo (master)
+$ touch zzh1stRepo-test.txt
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo (master)
+$ git add zzh1stRepo-test.txt
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo (master)
+$ git commit -m "添加到远程"
+[master 47b47bd] 添加到远程
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 zzh1stRepo-test.txt
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo (master)
+$ git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'git@github.com:zuozihaozzz/zzh1stRepo.git'
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo (master)
+$ git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 326 bytes | 326.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:zuozihaozzz/zzh1stRepo.git
+   77233ed..47b47bd  master -> master
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo (master)
+$ git remote -v
+origin  git@github.com:zuozihaozzz/zzh1stRepo.git (fetch)
+origin  git@github.com:zuozihaozzz/zzh1stRepo.git (push)
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo (master)
+$ git remote add origin2 git@github.com:zuozihaozzz/zzh1stRepo.git
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo (master)
+$ git remote -v
+origin  git@github.com:zuozihaozzz/zzh1stRepo.git (fetch)
+origin  git@github.com:zuozihaozzz/zzh1stRepo.git (push)
+origin2 git@github.com:zuozihaozzz/zzh1stRepo.git (fetch)
+origin2 git@github.com:zuozihaozzz/zzh1stRepo.git (push)
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo (master)
+$ git remote rm oringin2
+fatal: No such remote: 'oringin2'
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo (master)
+$ git remote rm origin2
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo (master)
+$ git remote -v
+origin  git@github.com:zuozihaozzz/zzh1stRepo.git (fetch)
+origin  git@github.com:zuozihaozzz/zzh1stRepo.git (push)
+
+DELL@DESKTOP-N4IC652 MINGW64 ~/zzh1stRepo (master)
+$
